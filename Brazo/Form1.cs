@@ -32,7 +32,8 @@ namespace Brazo
 
         void Init()
         {
-            port.PortName = "COM4"; //Output port name//--IMPORTANTE CHICOS, VARIA EN CADA PUERTO QUE SE CONECTE, EL NOMBRE DEL PUERTO SE PUEDE CONSULTAR DESDE ARDUINO. TENEIS QUE PONER EL PUERTO CORRECTO.--//
+            port.PortName = "COM4"; //Output port name//--IMPORTANTE CHICOS, VARIA EN CADA PUERTO QUE SE CONECTE
+                                    //EL NOMBRE DEL PUERTO SE PUEDE CONSULTAR DESDE ARDUINO. TENEIS QUE PONER EL PUERTO CORRECTO.--//
             port.BaudRate = 9600;
             try
             {
