@@ -142,7 +142,7 @@ namespace Brazo
 
         private void BaseServo_KeyDown(object sender, KeyEventArgs e)
         {
-            //if (port.IsOpen)
+            if (port.IsOpen)
             {
                 if (e.KeyCode == Keys.Enter)
                 {
@@ -159,7 +159,7 @@ namespace Brazo
                         }
                         BS_trackBar.Value = d;
                         string v = (d + sn[0]).ToString();
-                        //port.WriteLine(v);
+                        port.WriteLine(v);
                         Pause();
                     }
                     else if (BS_textBox.Text == "")
@@ -351,13 +351,13 @@ namespace Brazo
             {
                 s[i] = sn[i] + p[j];
             }
-            /*
+            
             for (int i=0; i<s.Length; i++)
             {
                 port.Write(s[i].ToString());
                 Pause();
             }
-            */
+            
             BS_trackBar.Value  = p[0];
             SS_trackBar.Value  = p[1];
             ES_trackBar.Value  = p[2];
@@ -395,19 +395,19 @@ namespace Brazo
 
         private void Home_Click(object sender, EventArgs e)
         {
-           // if (port.IsOpen)
+            if (port.IsOpen)
                 MoveTo(h);
         }
 
         private void Macro1_Click(object sender, EventArgs e)
         {
-            //if (port.IsOpen)
+            if (port.IsOpen)
                 MoveToPlus(new int[] { 10, 10, 10, 10, 10, 10 });
         }
 
         private void Macro2_Click(object sender, EventArgs e)
         {
-            //if (port.IsOpen)
+            if (port.IsOpen)
                 MoveTo(CeroArray);
         }
 
