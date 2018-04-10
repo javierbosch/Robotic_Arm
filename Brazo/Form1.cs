@@ -17,7 +17,6 @@ namespace Brazo
 
         int[] sn = { 2000, 3000, 4000, 5000, 6000, 7000 };  //Values for each servo//
 
-
         int[] h = { 125, 95, 49, 112, 100, 104 };   //Home values
 
         int[] CeroArray = { 0, 0, 0, 0, 0, 0 }; //Possible position//--Haced todos los de estos que querais para preparar posiciones preestablecidas del brazo--//
