@@ -347,14 +347,14 @@ namespace Brazo
         private void MoveTo(int[] p)
         {
             int[] s = new int[6];
-            for (int i=0, j=0; i<sn.Length; i++, j++)
+            for (int i=0; i<sn.Length; i++)
             {
-                s[i] = sn[i] + p[j];
+                s[i] = sn[i] + p[i];
             }
             
-            for (int i=0; i<s.Length; i++)
+            for (int j=0; j<s.Length; j++)
             {
-                port.Write(s[i].ToString());
+                port.Write(s[j].ToString());
                 Pause();
             }
             
