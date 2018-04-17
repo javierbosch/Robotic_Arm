@@ -1,4 +1,4 @@
-﻿//By Javier Bosch, CTO, Deutsche Schule Sevilla//
+//By Javier Bosch, CTO, Deutsche Schule Sevilla//
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +16,7 @@ namespace Brazo
         SerialPort port = new SerialPort();
 
         int[] sn = { 2000, 3000, 4000, 5000, 6000, 7000 };  //Values for each servo//
+
 
         int[] h = { 125, 95, 49, 112, 100, 104 };   //Home values
 
@@ -378,9 +379,9 @@ namespace Brazo
             int[] pv = new int[] {BS_trackBar.Value, SS_trackBar.Value, ES_trackBar.Value, WFS_trackBar.Value, WRS_trackBar.Value, GS_trackBar.Value };
             
             int[] p = new int[6];
-            for (int i = 0, j = 0; i < sn.Length; i++, j++)
+            for (int i = 0; i < sn.Length; i++)
             {
-                p[i] = plus[i] + pv[j];
+                p[i] = plus[i] + pv[i];
             }
             
             for (int i = 0; i < p.Length; i++)
